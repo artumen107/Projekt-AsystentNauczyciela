@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/marks_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/count_students_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/count_students_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48sp"
+        app:layout_constraintBottom_toTopOf="@id/ButtonAddMark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marks_recyclerView"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/Black">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/ButtonBackToStudents"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:textColor="@color/Black"
+        android:minHeight="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ButtonAddMark"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/ButtonAddMark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textColor="@color/Black"
+        android:minHeight="96dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ButtonBackToStudents"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

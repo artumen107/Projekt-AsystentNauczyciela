@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/subjectsFragment">
+
+    <fragment
+        android:id="@+id/classesFragment"
+        android:name="com.example.asystentnauczyciela.fragments.ClassesFragment"
+        android:label="classesFragment">
+        <action
+            android:id="@+id/classesToSubjectsAction"
+            app:destination="@id/subjectsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/classesToStudentsAction"
+            app:destination="@id/studentsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.example.asystentnauczyciela.fragments.StudentsFragment"
+        android:label="studentsFragment">
+        <action
+            android:id="@+id/studentsToClassesAction"
+            app:destination="@id/classesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <action
+            android:id="@+id/studentsToMarksAction"
+            app:destination="@id/marksFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+        <argument
+            android:name="classTag"
+            app:argType="string" />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/marksFragment"
+        android:name="com.example.asystentnauczyciela.fragments.MarksFragment"
+        android:label="marksFragment">
+        <action
+            android:id="@+id/marksToStudentsAction"
+            app:destination="@id/studentsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="studentId"
+            app:argType="long" />
+        <argument
+            android:name="studentName"
+            app:argType="string" />
+        <argument
+            android:name="classTag"
+            app:argType="string" />
+        <argument
+            android:name="albumNumber"
+            app:argType="long" />
+        <argument
+            android:name="subjectName"
+            app:argType="string" />
+        <argument
+            android:name="studentSurname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="com.example.asystentnauczyciela.fragments.SubjectsFragment"
+        android:label="subjectsFragment">
+        <action
+            android:id="@+id/subjectsToClassesAction"
+            app:destination="@id/classesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+</navigation>

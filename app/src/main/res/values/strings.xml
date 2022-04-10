@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Teacher assistant</string>
+    <string name="studentListText">Students list</string>
+    <string name="classesListText">Group list</string>
+    <string name="subjectListText">Subjects list</string>
+    <string name="specificGroupText">Group 1</string>
+    <string name="specificClassText">monday 10:45–12:00</string>
+    <string name="specificStudentText">Name Surname, album number</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_subject">First subject</string>
+    <string name="second_subject_if_needed">Second subject (if needed)</string>
+    <string name="third_subject_if_needed">Third subject (if needed)</string>
+    <string name="albumNumber">Album number</string>
+    <string name="nameEditText">Name</string>
+    <string name="surnameEditText">Surname</string>
+    <string name="add_new">ADD NEW</string>
+    <string name="subjects_TextView">SUBJECTS</string>
+    <string name="subject">subject</string>
+    <string name="groupTag">group tag</string>
+    <string-array name="subjects_array">
+        <item>Modelling with R</item>
+        <item>English classes</item>
+        <item>App Programming</item>
+    </string-array>
+    <string-array name="weekDays">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+</resources>
